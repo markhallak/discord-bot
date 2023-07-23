@@ -1,9 +1,10 @@
+import os
+
 import discord
 from discord.ext import commands, tasks
 import asyncio
 
 from nomiAI import NomiAI
-
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
@@ -87,12 +88,12 @@ async def nine_nine(ctx):
 
 async def initClient():
     print("Client starting to run...")
-    await client.start("MTEzMTE3MjI5NTU3OTI3OTM3MQ.GtEovu.LNtU83ROjzWx0sUGzw2Wr4JE1I74OrRGMihjeM")
+    await client.start(os.environ['TOKEN_SECRET'])
 
 
 async def initBot():
     print("Bot starting to run")
-    await bot.start("MTEzMTE3MjI5NTU3OTI3OTM3MQ.GtEovu.LNtU83ROjzWx0sUGzw2Wr4JE1I74OrRGMihjeM")
+    await bot.start(os.environ['TOKEN_SECRET'])
 
 
 async def main():
