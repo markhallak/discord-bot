@@ -1,4 +1,4 @@
-discord.py==2.3.1
+discord.py==2.3.0
 Requests==2.31.0
 selenium==4.10.0
 webdriver_manager==3.9.1
